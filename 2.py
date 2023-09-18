@@ -2,41 +2,41 @@
 import random
 
 # Создание класса с выбором и счетом
-class RockPaperScissors:
+class Game:
     def __init__(self):
-        self.choices = ["rock", "paper", "scissors"]
+        self.choices = ["Камень","Ножницы", "Бумага"]
         self.player_score = 0
         self.computer_score = 0
 
 # Создание функции игры
-    def play_game(self):
+    def game(self):
         while True:
-            player_choice = input("Enter your choice: \n1-rock\n2-paper\n3-scissors\n ")
+            player_choice = input("Выберите: \n1-Камень\n2-Ножницы\n3-Бумага \n ")
             computer_choice = random.choice(self.choices)
 
-            print(f"Player chooses {player_choice}")
-            print(f"Computer chooses {computer_choice}")
+            print(f"Вы выбрали {player_choice}")
+            print(f"Компьютер выбрал {computer_choice}")
 
-            if player_choice == computer_choice:
-                print("It's a tie!")
+            if player_choice.capitalize() == computer_choice:
+                print("Ничья!")
             elif (
-                (player_choice == "rock" and computer_choice == "scissors")
-                or (player_choice == "paper" and computer_choice == "rock")
-                or (player_choice == "scissors" and computer_choice == "paper")
+                (player_choice == "Камень" and computer_choice == "Ножницы")
+                or (player_choice == "Бумага" and computer_choice == "Камень")
+                or (player_choice == "Ножницы" and computer_choice == "Бумага")
             ):
-                print("Player wins!")
+                print("Вы победили!")
                 self.player_score += 1
             else:
-                print("Computer wins!")
+                print("Вы проиграли!")
                 self.computer_score += 1
 
-            print(f"Player score: {self.player_score}")
-            print(f"Computer score: {self.computer_score}")
+            print(f"Вы: {self.player_score}")
+            print(f"Компьютер: {self.computer_score}")
 
-            play_again = input("Do you want to play again? (y/n):\n ")
-            if play_again.lower() != "y":
+            play_again = input("Вы ходите сыграть снова? (да/нет):\n ")
+            if play_again.lower() != "да":
                 break
 
 # Запуск игры
-game = RockPaperScissors()
-game.play_game()
+play = Game()
+play.game()

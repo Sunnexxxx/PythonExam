@@ -4,7 +4,7 @@ class Hangman:
     def __init__(self, word):
         self.word = word
         self.guesses = []
-        self.max_attempts = 6
+        self.max_attempts = 10
 
     def play(self):
         print("Добро пожаловать в висилицу!")
@@ -12,14 +12,14 @@ class Hangman:
         print("В слове", len(self.word), "буквы.")
 
         while True:
-            self.display_word()
+            self.words()
 
-            if self.is_word_guessed():
+            if self.guessed():
                 print("Поздравляю!Вы верно угадали слово.")
                 break
 
             if len(self.guesses) >= self.max_attempts:
-                print("ы проиграли! Ваши попытки закончились.")
+                print("Вы проиграли! Ваши попытки закончились.")
                 print("Слово было:", self.word)
                 break
 
@@ -30,7 +30,7 @@ class Hangman:
                 print("Неправильно!")
                 self.display_hangman(len(self.guesses))
 
-    def display_word(self):
+    def words(self):
         for letter in self.word:
             if letter in self.guesses:
                 print(letter, end=" ")
@@ -38,7 +38,7 @@ class Hangman:
                 print("_", end=" ")
         print()
 
-    def is_word_guessed(self):
+    def guessed(self):
         for letter in self.word:
             if letter not in self.guesses:
                 return False
@@ -125,7 +125,7 @@ class Hangman:
         print(stages[attempts])
 
 
-word_list = ["пайтон", "виселица", "программирование", "код", "компьютер"]
+word_list = ["пайтон", "виселица", "сайт", "код", "компьютер"]
 words = random.choice(word_list)
 
 game = Hangman(words)

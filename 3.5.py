@@ -1,21 +1,21 @@
 class MadLibs:
     def __init__(self):
-        self.noun = ""
-        self.verb = ""
-        self.adjective = ""
-        self.adverb = ""
+        self.one = ""
+        self.two = ""
+        self.three = ""
+        self.four = ""
 
-    def get_inputs(self):
-        self.noun = input("Введите существительное: ")
-        self.verb = input("Введите глагол: ")
-        self.adjective = input("Введите прилагательное: ")
-        self.adverb = input("Введите наречие: ")
+    def inputs(self):
+        self.one = input("Введите язык программирования: ")
+        self.two = input("Введите кол-во месяцев: ")
+        self.three = input("Введите редактор кода: ")
+        self.four = input("Введите ещё один язык программирования: ")
 
-    def generate_story(self):
-        story = f"{self.adjective} {self.noun} {self.verb} {self.adverb}."
+    def story(self):
+        story = f"Я учу {self.one} в течении {self.two} месяцев и пишу на {self.three}, дальше я хочу изучать язык {self.four}."
         return story
 
-madlibs_game = MadLibs()
-madlibs_game.get_inputs()
-story = madlibs_game.generate_story()
+madlibs = MadLibs()
+madlibs.inputs()
+story = madlibs.story()
 print(story)

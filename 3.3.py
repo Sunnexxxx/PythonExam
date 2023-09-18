@@ -4,12 +4,12 @@ class Question:
         self.choices = choices
         self.answer = answer
 
-    def display_question(self):
+    def my_questions(self):
         print(self.question)
         for i, choice in enumerate(self.choices):
             print(f"{i+1}. {choice}")
 
-    def check_answer(self, user_answer):
+    def check(self, user_answer):
         return user_answer == self.answer
 
 
@@ -20,9 +20,9 @@ class QuizGame:
 
     def play(self):
         for question in self.questions:
-            question.display_question()
+            question.my_questions()
             user_answer = int(input("Введите ваш ответ (1-4):"))
-            if question.check_answer(user_answer):
+            if question.check(user_answer):
                 print("Верно!")
                 self.score += 1
             else:
