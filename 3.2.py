@@ -10,7 +10,7 @@ class NumberGuessingGame:
 
     def play(self):
         while True:
-            guess = int(input(f"Guess a number between {self.min_num} and {self.max_num}: "))
+            guess = int(input(f"Угадайте число между {self.min_num} и {self.max_num}: "))
             self.num_attempts += 1
 
             if guess < self.target_num:
@@ -18,7 +18,7 @@ class NumberGuessingGame:
             elif guess > self.target_num:
                 print("Too high!")
             else:
-                print(f"Congratulations! You guessed the number in {self.num_attempts} attempts.")
+                print(f"Поздравляю!Вы угадали число за {self.num_attempts} попыток.")
                 break
 
 

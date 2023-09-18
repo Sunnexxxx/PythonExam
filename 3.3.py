@@ -21,23 +21,22 @@ class QuizGame:
     def play(self):
         for question in self.questions:
             question.display_question()
-            user_answer = int(input("Enter your answer (1-4): "))
+            user_answer = int(input("Введите ваш ответ (1-4):"))
             if question.check_answer(user_answer):
-                print("Correct!")
+                print("Верно!")
                 self.score += 1
             else:
-                print("Incorrect!")
+                print("Неверно!")
             print()
 
-        print(f"Quiz completed! Your score is {self.score}/{len(self.questions)}.")
+        print(f"Викторина окончена! Ваш счёт: {self.score}/{len(self.questions)}.")
 
 
-# Usage example
 questions = [
-    Question("What is the capital of France?", ["Paris", "London", "Berlin", "Rome"], 1),
-    Question("What is the largest planet in our solar system?", ["Jupiter", "Saturn", "Mars", "Earth"], 1),
-    Question("Who painted the Mona Lisa?", ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"], 1),
-    Question("What is the chemical symbol for gold?", ["Au", "Ag", "Fe", "Cu"], 1),
+    Question("Что такое while?", ["Функция", "Цикл", "Свойство", "Класс"], 2),
+    Question("Какая команда запускает код?", ["Shift+Alt", "Ctrl+Alt", "Sift+F10", "Ctrl+F12"], 3),
+    Question("Какая команда создаёт функцию?", ["def", "for", "len", "print"], 1),
+    Question("Что делает commit?", ["Отправляет", "Удаляет", "Обновляет", "Применяет изменения"], 4),
 ]
 
 

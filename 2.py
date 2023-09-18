@@ -1,15 +1,17 @@
+# Импортирование библиотеки
 import random
 
-
+# Создание класса с выбором и счетом
 class RockPaperScissors:
     def __init__(self):
         self.choices = ["rock", "paper", "scissors"]
         self.player_score = 0
         self.computer_score = 0
 
+# Создание функции игры
     def play_game(self):
         while True:
-            player_choice = input("Enter your choice: \n1-rock\n2-paper\n3-scissors ")
+            player_choice = input("Enter your choice: \n1-rock\n2-paper\n3-scissors\n ")
             computer_choice = random.choice(self.choices)
 
             print(f"Player chooses {player_choice}")
@@ -31,10 +33,10 @@ class RockPaperScissors:
             print(f"Player score: {self.player_score}")
             print(f"Computer score: {self.computer_score}")
 
-            play_again = input("Do you want to play again? (y/n): ")
+            play_again = input("Do you want to play again? (y/n):\n ")
             if play_again.lower() != "y":
                 break
 
-
+# Запуск игры
 game = RockPaperScissors()
 game.play_game()
