@@ -37,6 +37,7 @@ class Game:
             if play_again.lower() != "да":
                 break
 
+
 # Запуск игры
 play = Game()
 play.game()

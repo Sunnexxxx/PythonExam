@@ -39,6 +39,5 @@ questions = [
     Question("Что делает commit?", ["Отправляет", "Удаляет", "Обновляет", "Применяет изменения"], 4),
 ]
 
-
 game = QuizGame(questions)
 game.play()
