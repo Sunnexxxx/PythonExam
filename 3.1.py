@@ -128,5 +128,6 @@ class Hangman:
 word_list = ["пайтон", "виселица", "сайт", "код", "компьютер"]
 words = random.choice(word_list)
 
+
 game = Hangman(words)
 game.play()

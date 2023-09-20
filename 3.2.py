@@ -22,6 +22,5 @@ class Game:
                 break
 
 
-
 game = Game(1, 100)
 game.play()
