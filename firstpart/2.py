@@ -4,7 +4,7 @@ import random
 # Создание класса с выбором и счетом
 class Game:
     def __init__(self):
-        self.choices = ["Камень","Ножницы", "Бумага"]
+        self.choices = ["Камень", "Ножницы", "Бумага"]
         self.player_score = 0
         self.computer_score = 0
 
