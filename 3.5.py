@@ -9,10 +9,10 @@ class MadLibs:
         self.one = input("Введите язык программирования: ")
         self.two = input("Введите кол-во месяцев: ")
         self.three = input("Введите редактор кода: ")
-        self.four = input("Введите ещё один язык программирования: ")
+        self.four = input("Введите имя учителя : ")
 
     def story(self):
-        story = f"Я учу {self.one} в течении {self.two} месяцев и пишу на {self.three}, дальше я хочу изучать язык {self.four}."
+        story = f"Я учу {self.one} в течении {self.two} месяцев и пишу на {self.three}, моего учителя зовут {self.four}."
         return story
 
 madlibs = MadLibs()
